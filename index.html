@@ -11,43 +11,167 @@
     <title></title>
   </head>
   <body>
-    <p id = 'demo'></p>
     <div class="container">
-      <div class="row">
-        <!--Item Image-->
-        <div class="col">
-          <img style="max-width:100%;" src="https://www.amstadion.com/media/catalog/product/cache/2/thumbnail/695x/9df78eab33525d08d6e5fb8d27136e95/m/u/mu-khn02000_1.jpg" />
-        </div>
-        <!--Product Buy-->
-        <div class="col">
-          <h1 class="display-4">Manchester United Kit 2020</h1>
-          <h1 class="display-5"><small>Limited Offer</small></h1>
-          <div class="row">
-           <h3 style="margin-left:10px;"><del>₹4999</del></h3>
-           <h3 style="margin-left:10px;">₹2999</h3>
+      <div class="col">
+        <div class="row">
+          <!--Item Image-->
+          <div class="col">
+            <img style="max-width:100%;" src="https://www.lifestylesports.com/dw/image/v2/BCDN_PRD/on/demandware.static/-/Sites-LSS_eCommerce_Master/default/dw6320f86c/images/57386341xlarge.jpg" />
           </div>
-          <div class="section" style="margin-bottom:15px">
-            <h6 style="margin-top:15px;">TYPE</h6>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" name="KitType" id="Home" onclick="ColorChosen(this)">Home</button>
-              <button type="button" name="KitType" id="Away"  onclick="ColorChosen(this)">Away</button>
-              <button type="button" name="KitType" id="Alternate" onclick="ColorChosen(this)">Alternate</button>
+          <!--Product Buy-->
+          <div class="col">
+            <h1 class="display-4" id="itemName-1">Manchester United Kit 2020</h1>
+            <h1 class="display-5"><small>Limited Offer</small></h1>
+            <div class="row">
+             <h3 style="margin-left:10px;" id="oldPrice-1"><del>₹4999</del></h3>
+             <h3 style="margin-left:10px;" id="newPrice-1">₹2999</h3>
             </div>
-          </div>
-          <div class="dropdown" style="margin-bottom:20px">
-            <button type="button" id="dropdownButtonSize" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-              Size
+            <div class="section" style="margin-bottom:15px">
+              <h6 style="margin-top:15px;">TYPE</h6>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" name="KitType-1" id="Home-1" onclick="ColorChosen(this)">Home</button>
+                <button type="button" name="KitType-1" id="Away-1"  onclick="ColorChosen(this)">Away</button>
+                <button type="button" name="KitType-1" id="Third-1" onclick="ColorChosen(this)">Third</button>
+              </div>
+            </div>
+            <div class="dropdown" style="margin-bottom:20px">
+              <button type="button" id="dropdownButtonSize-1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Size
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item" id = "S-1" name="S" onclick="SizeChosen(this)">S</button>
+                <button class="dropdown-item" id = "M-1" name="M" onclick="SizeChosen(this)">M</button>
+                <button class="dropdown-item" id = "L-1" name="L" onclick="SizeChosen(this)">L</button>
+                <button class="dropdown-item" id = "XL-1" name="XL" onclick="SizeChosen(this)">XL</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="number" id="Quantity-1" oninput="QuantityChosen(this)" value=0 max="10" min="0">
+            </div>
+            <button type="button" id="CartBtn-1" onclick="AddToCartFn(this)" name="button">
+              Add To Cart
             </button>
-            <div class="dropdown-menu">
-              <button class="dropdown-item" id = "S" name="S" onclick="SizeChosen(this)">S</button>
-              <button class="dropdown-item" id = "M" name="M" onclick="SizeChosen(this)">M</button>
-              <button class="dropdown-item" id = "L" name="L" onclick="SizeChosen(this)">L</button>
-              <button class="dropdown-item" id = "XL" name="XL" onclick="SizeChosen(this)">XL</button>
-            </div>
           </div>
-          <button type="button" onclick="AddToCartFn()" name="button">
-            Add To Cart
-          </button>
+        </div>
+        <div class="row">
+          <!--Item Image-->
+          <div class="col">
+            <img style="max-width:100%;" src="https://www.lifestylesports.com/dw/image/v2/BCDN_PRD/on/demandware.static/-/Sites-LSS_eCommerce_Master/default/dw2f2df9e6/images/57382544xlarge.jpg" />
+          </div>
+          <!--Product Buy-->
+          <div class="col">
+            <h1 class="display-4" id="itemName-2">FC Barcelona Kit 2020</h1>
+            <h1 class="display-5"><small>Limited Offer</small></h1>
+            <div class="row">
+              <h3 style="margin-left:10px;" id="oldPrice-2"><del>₹4999</del></h3>
+              <h3 style="margin-left:10px;" id="newPrice-2">₹2999</h3>
+            </div>
+            <div class="section" style="margin-bottom:15px">
+              <h6 style="margin-top:15px;">TYPE</h6>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" name="KitType-2" id="Home-2" onclick="ColorChosen(this)">Home</button>
+                <button type="button" name="KitType-2" id="Away-2"  onclick="ColorChosen(this)">Away</button>
+                <button type="button" name="KitType-2" id="Third-2" onclick="ColorChosen(this)">Third</button>
+              </div>
+            </div>
+            <div class="dropdown" style="margin-bottom:20px">
+              <button type="button" id="dropdownButtonSize-2" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Size
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item" id = "S-2" name="S" onclick="SizeChosen(this)">S</button>
+                <button class="dropdown-item" id = "M-2" name="M" onclick="SizeChosen(this)">M</button>
+                <button class="dropdown-item" id = "L-2" name="L" onclick="SizeChosen(this)">L</button>
+                <button class="dropdown-item" id = "XL-2" name="XL" onclick="SizeChosen(this)">XL</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="number" id="Quantity-2" oninput="QuantityChosen(this)" value=0 max="10" min="0">
+            </div>
+            <button type="button" id="CartBtn-2" onclick="AddToCartFn(this)" name="button">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <!--Item Image-->
+          <div class="col">
+            <img style="max-width:100%;" src="https://www.lifestylesports.com/dw/image/v2/BCDN_PRD/on/demandware.static/-/Sites-LSS_eCommerce_Master/default/dwb0c29457/images/57382722xlarge.jpg?sw=530" />
+          </div>
+          <!--Product Buy-->
+          <div class="col">
+            <h1 class="display-4" id="itemName-3">PSG Kit 2020</h1>
+            <h1 class="display-5"><small>Limited Offer</small></h1>
+            <div class="row">
+             <h3 style="margin-left:10px;" id="oldPrice-3"><del>₹4999</del></h3>
+             <h3 style="margin-left:10px;" id="newPrice-3">₹2999</h3>
+            </div>
+            <div class="section" style="margin-bottom:15px">
+              <h6 style="margin-top:15px;">TYPE</h6>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" name="KitType-3" id="Home-3" onclick="ColorChosen(this)">Home</button>
+                <button type="button" name="KitType-3" id="Away-3"  onclick="ColorChosen(this)">Away</button>
+                <button type="button" name="KitType-3" id="Third-3" onclick="ColorChosen(this)">Third</button>
+              </div>
+            </div>
+            <div class="dropdown" style="margin-bottom:20px">
+              <button type="button" id="dropdownButtonSize-3" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Size
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item" id = "S-3" name="S" onclick="SizeChosen(this)">S</button>
+                <button class="dropdown-item" id = "M-3" name="M" onclick="SizeChosen(this)">M</button>
+                <button class="dropdown-item" id = "L-3" name="L" onclick="SizeChosen(this)">L</button>
+                <button class="dropdown-item" id = "XL-3" name="XL" onclick="SizeChosen(this)">XL</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="number" id="Quantity-3" oninput="QuantityChosen(this)" value=0 max="10" min="0">
+            </div>
+            <button type="button" id="CartBtn-3" onclick="AddToCartFn(this)" name="button">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <!--Item Image-->
+          <div class="col">
+            <img style="max-width:100%;" src="https://www.lifestylesports.com/dw/image/v2/BCDN_PRD/on/demandware.static/-/Sites-LSS_eCommerce_Master/default/dw2087e7d7/images/57386713xlarge.jpg" />
+          </div>
+          <!--Product Buy-->
+          <div class="col">
+            <h1 class="display-4" id="itemName-4">Juventus Kit 2020</h1>
+            <h1 class="display-5"><small>Limited Offer</small></h1>
+            <div class="row">
+             <h3 style="margin-left:10px;" id="oldPrice-4"><del>₹4999</del></h3>
+             <h3 style="margin-left:10px;" id="newPrice-4">₹2999</h3>
+            </div>
+            <div class="section" style="margin-bottom:15px">
+              <h6 style="margin-top:15px;">TYPE</h6>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" name="KitType-4" id="Home-4" onclick="ColorChosen(this)">Home</button>
+                <button type="button" name="KitType-4" id="Away-4"  onclick="ColorChosen(this)">Away</button>
+                <button type="button" name="KitType-4" id="Third-4" onclick="ColorChosen(this)">Third</button>
+              </div>
+            </div>
+            <div class="dropdown" style="margin-bottom:20px">
+              <button type="button" id="dropdownButtonSize-4" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Size
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item" id = "S-4" name="S" onclick="SizeChosen(this)">S</button>
+                <button class="dropdown-item" id = "M-4" name="M" onclick="SizeChosen(this)">M</button>
+                <button class="dropdown-item" id = "L-4" name="L" onclick="SizeChosen(this)">L</button>
+                <button class="dropdown-item" id = "XL-4" name="XL" onclick="SizeChosen(this)">XL</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="number" id="Quantity-4" oninput="QuantityChosen(this)" value=0 max="10" min="0">
+            </div>
+            <button type="button" id="CartBtn-4" onclick="AddToCartFn(this)" name="button">
+              Add To Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>

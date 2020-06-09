@@ -1,8 +1,30 @@
-var a = "";
-var b = "";
+finalCart = {};
+
+var clevertap = {event:[],profile:[], account:[], onUserLogin:[],
+  notifications:[], privacy:[]};
+
+clevertap.account.push({"id": "WR5-K46-Z95Z"});
+clevertap.privacy.push({optOut: false});
+clevertap.privacy.push({useIP: true});
+
+(function () {
+		 var wzrk = document.createElement('script');
+		 wzrk.type = 'text/javascript';
+		 wzrk.async = true;
+		 wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+		 var s = document.getElementsByTagName('script')[0];
+		 s.parentNode.insertBefore(wzrk, s);
+  })();
+
+
 function ColorChosen(colorChosenUser){
-  a = colorChosenUser.textContent;
-  sampleList = document.getElementsByName('KitType');
+  if (!('itemName-'+colorChosenUser.id.slice(-1) in finalCart)){
+    finalCart['itemName-'+colorChosenUser.id.slice(-1)] = {'Type':colorChosenUser.textContent};
+  }
+  else {
+    finalCart['itemName-'+colorChosenUser.id.slice(-1)]['Type'] = colorChosenUser.textContent;
+  }
+  sampleList = document.getElementsByName('KitType-'+colorChosenUser.id.slice(-1));
   for (var x =0; x < sampleList.length;x++){
     sampleList[x].className = '';
   }
@@ -11,12 +33,45 @@ function ColorChosen(colorChosenUser){
 }
 
 function SizeChosen(sizeChosenUser){
-  b = sizeChosenUser.textContent;
-  document.getElementById("dropdownButtonSize").textContent = b;
+  if (!('itemName-'+sizeChosenUser.id.slice(-1) in finalCart)){
+    finalCart['itemName-'+sizeChosenUser.id.slice(-1)] = {'Size': sizeChosenUser.textContent};
+  }
+  else {
+    finalCart['itemName-'+sizeChosenUser.id.slice(-1)]['Size'] = sizeChosenUser.textContent;
+  }
+
+  document.getElementById("dropdownButtonSize-"+sizeChosenUser.id.slice(-1)).textContent = sizeChosenUser.textContent;
 }
 
-function AddToCartFn(){
-  if (a.length != 0 && b.length != 0){
-    alert(a);
+function QuantityChosen(quantityChosenUser){
+  quantityChosenUser.value =quantityChosenUser.value.replace(/[^0-9]/g,'');
+
+  if (quantityChosenUser.value>10){
+    quantityChosenUser.value=10;
   }
+
+  if (!('itemName-'+quantityChosenUser.id.slice(-1) in finalCart)){
+    finalCart['itemName-'+quantityChosenUser.id.slice(-1)] = {'Quantity': quantityChosenUser.value};
+  }
+  else {
+    finalCart['itemName-'+quantityChosenUser.id.slice(-1)]['Quantity'] = quantityChosenUser.value;
+  }
+
+}
+
+function AddToCartFn(cartElmnt){
+  var a = finalCart['itemName-'+cartElmnt.id.slice('-1')]['Type'];
+  var b= finalCart['itemName-'+cartElmnt.id.slice('-1')]['Size'];
+  var c = finalCart['itemName-'+cartElmnt.id.slice('-1')]['Quantity']
+  var d = document.getElementById('itemName-'+cartElmnt.id.slice('-1')).innerHTML;
+
+  clevertap.event.push('Added To Cart',{
+    'Product Name': d,
+    'Product Type': a,
+    'Product Size': b,
+    'Product Quantity': c,
+  });
+
+  alert(a+'/'+b+'/'+c+'/'+d);
+
 }

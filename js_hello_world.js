@@ -5,7 +5,7 @@ finalCart = {};
 var clevertap = {event:[],profile:[], account:[], onUserLogin:[],
   notifications:[], privacy:[]};
 
-clevertap.account.push({"id": "ZR5-K46-Z95Z"});
+clevertap.account.push({"id": "6Z8-6W9-Z95Z"});
 clevertap.privacy.push({optOut: false});
 clevertap.privacy.push({useIP: true});
 
